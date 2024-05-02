@@ -11,6 +11,7 @@ const ButtonCom = ({
     btnStyle,
     onPress=() =>{ },
     img,
+    btnTextStyle={}
 }
 ) => {
     return (
@@ -20,7 +21,7 @@ const ButtonCom = ({
         style={{...styles. btnStyle,... btnStyle}}
         >
             {!!img ? <Image style={{tintColor:colors.white}} source={img} />:
-            <Text style={styles.btnTextStyle}>{btnText}</Text>
+            <Text style={{...styles.btnTextStyle,...btnTextStyle}}>{btnText}</Text>
         }
         </TouchableOpacity>
     );
