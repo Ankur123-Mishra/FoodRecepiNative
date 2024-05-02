@@ -1,20 +1,22 @@
-import React from 'react';
-// import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Welcome from './component/Screen/Welcome';
-import Home from './component/Screen/Home'; 
 
-const Stack = createNativeStackNavigator();
-
-function App() {
+//import liraries
+import React, { Component } from 'react';
+import { View, Text, StyleSheet ,} from 'react-native';
+import AuthStack from './src/Navigation/AuthStack';
+import Routes from './src/Navigation/Routes';
+Routes
+// create a component
+const MyComponent = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='Home' component={Home}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-   
-  )
-}
-export default App;
+    <View style={{flex: 1,}}>
+     <Routes/>
+    </View>
+  );
+};
+
+// define your styles
+
+
+//make this component available to the app
+export default MyComponent;
+//1.3 hour complete
